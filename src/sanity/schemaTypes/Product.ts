@@ -1,4 +1,3 @@
-
 import { BiLogoProductHunt } from "react-icons/bi";
 import { defineArrayMember, defineField, defineType } from "sanity";
 
@@ -45,7 +44,7 @@ export const productType = defineType({
                 ],
 
             },
-            hidden: ({ document }) => document?.category !== 'sarees'
+            hidden: ({ document }) => document?.category !== 'sarees' && document?.category !== 'dupattas'
 
         }),
         defineField({
