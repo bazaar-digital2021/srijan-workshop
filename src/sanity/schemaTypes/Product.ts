@@ -33,68 +33,22 @@ export const productType = defineType({
             validation: (rule) => rule.required(),
         }),
         defineField({
-            name: 'subCategory',
-            title: 'Sub Categories',
-            type: 'string',
-            options: {
-                list: [
-                    { title: 'Chanderi Sarees', value: 'chanderi-sarees' },
-                    { title: 'Paper Silk', value: 'paper-silk' },
-                    { title: 'Tussar silk', value: 'tussar-silk' },
-                ],
-
-            },
-            hidden: ({ document }) => document?.category !== 'sarees' && document?.category !== 'dupattas'
-
-        }),
-        defineField({
-            name: 'brandName',
-            type: 'array',
-            of: [{ type: 'string' }],
-            initialValue: ['None'],
-            // validation: (rule) => rule.required(),
-        }),
-        defineField({
-            name: 'tags',
-            type: 'array',
-            of: [{ type: 'string' }],
-            initialValue: ['None', 'None'],
-            validation: (rule) => rule.required(),
-        }),
-        defineField({
-            name: 'minPrice',
+            name: 'price',
             type: 'number',
-            initialValue: 1,
+            initialValue: 2999,
             validation: (rule) => rule.required(),
         }),
         defineField({
-            name: 'maxPrice',
+            name: 'totalDiscount',
+            title: 'Total Discount in percentage',
             type: 'number',
-            initialValue: 100,
-            validation: (rule) => rule.required(),
+            initialValue: 0
         }),
         defineField({
-            name: 'minQuantity',
+            name: 'totalQuantity',
             type: 'number',
             validation: (rule) => rule.required(),
             initialValue: 1000
-        }),
-        defineField({
-            name: 'leadTime',
-            type: 'number',
-            initialValue: 30
-        }),
-        defineField({
-            name: 'unitMeasurement',
-            type: 'string',
-            initialValue: 'pieces'
-        }),
-        defineField({
-            name: 'hsnCode',
-            title: 'HSN Code',
-            type: 'number',
-            initialValue: 56012110,
-            validation: (rule) => rule.required().error("A HSN CODE is a 8 digit number")
         }),
         defineField({
             name: 'packagingDetails',
@@ -111,26 +65,6 @@ export const productType = defineType({
             name: 'images',
             type: 'array',
             of: [{ type: 'image' }],
-        }),
-        defineField({
-            name: 'productFamily',
-            title: 'Product Family',
-            type: 'reference',
-            to: [{ type: 'productFamily' }]
-        }),
-        defineField({
-            name: "productCustomAttributes",
-            title: "Custom Attributes",
-            type: "array",
-            of: [
-                {
-                    type: "object",
-                    fields: [
-                        { name: "attributeName", type: "string", title: "Attribute Name" },
-                        { name: "value", type: "array", title: "Value", of: [{ type: 'string' }] }
-                    ]
-                }
-            ]
         }),
         defineField({
             name: 'isActive',

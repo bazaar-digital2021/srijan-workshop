@@ -25,9 +25,14 @@ export const categoriesType = defineType({
                     { title: 'Unstiched Kurti', value: 'unstiched-kurtis' },
                     { title: 'Dupatta', value: 'dupattas' },
                     { title: 'Bangles', value: 'bangles' },
+                    { title: 'Blouse', value: 'blouse' },
                     { title: 'Bottom Wear', value: 'bottom-wear' },
                     { title: 'Mens Wear', value: 'mens-wear' },
-                    { title: 'Home Decor', value: 'home-decor' },
+                    { title: 'Bed Sheets', value: 'bed-sheets' },
+                    { title: 'Paintings', value: 'paintings' },
+                    { title: 'Table Cloth', value: 'table-cloth' },
+                    { title: 'Cussion Cover', value: 'cussion-cover' },
+                    { title: 'Sofa Cover', value: 'sofa-cover' }
                 ]
             },
             validation: (Rule) => Rule.required().error('Please select a category type'),
@@ -43,6 +48,7 @@ export const categoriesType = defineType({
                     { title: 'Chanderi Sarees', value: 'chanderi-sarees' },
                     { title: 'Paper Silk', value: 'paper-silk' },
                     { title: 'Tussar silk', value: 'tussar-silk' },
+                    { title: 'Malbon Silk', value: 'malbon-silk' }
                 ]
             },
             validation: (Rule) => Rule.custom((value, context) => {
@@ -60,9 +66,11 @@ export const categoriesType = defineType({
             hidden: ({ document }) => document?.categorySet !== 'dupattas',
             options: {
                 list: [
-                    { title: 'Cotton Dupattas', value: 'cotton-dupattas' },
-                    { title: 'Silk Dupattas', value: 'silk-dupattas' },
-                    { title: 'Embroidered Dupattas', value: 'embroidered-dupattas' },
+                    { title: 'Chanderi Dupattas', value: 'chanderi-dupattas' },
+                    { title: 'Paper Silk', value: 'paper-silk' },
+                    { title: 'Tussar silk', value: 'tussar-silk' },
+                    { title: 'Siffon Silk', value: 'siffon-silk' },
+                    { title: 'khadi Stoles', value: 'khadi-stoles' }
                 ]
             },
             validation: (Rule) => Rule.custom((value, context) => {
@@ -76,7 +84,7 @@ export const categoriesType = defineType({
             title: 'Kurti Subcategory',
             name: 'kurtiSubcategory',
             type: 'string',
-            hidden: ({ document }) => document?.categorySet !== 'kurtis',
+            hidden: ({ document }) => !['kurtis', 'stiched-kurtis', 'unstiched-kurtis'].includes((document as any)?.categorySet),
             options: {
                 list: [
                     { title: 'Cotton Kurtis', value: 'cotton-kurtis' },
@@ -90,6 +98,57 @@ export const categoriesType = defineType({
                 return true;
             })
         }),
+        defineField({
+            title: 'Bottom Wear Subcategory',
+            name: 'bottomSubcategory',
+            type: 'string',
+            hidden: ({ document }) => !['bottom-wear'].includes((document as any)?.categorySet),
+            options: {
+                list: [
+                    { title: 'Plazo', value: 'plazo' },
+                    { title: 'Skirt', value: 'skirt' },
+                ]
+            },
+        }),
+        defineField({
+            title: 'Mens Wear Subcategory',
+            name: 'mensSubcategory',
+            type: 'string',
+            hidden: ({ document }) => !['mens-wear'].includes((document as any)?.categorySet),
+            options: {
+                list: [
+                    { title: 'Kurta', value: 'kurta' },
+                    { title: 'Shirt', value: 'shirt' },
+                    { title: 'Dhoti', value: 'dhoti' },
+                ]
+            },
+        }),
+        defineField({
+            title: 'Bed Sheet Subcategory',
+            name: 'bedSheetSubcategory',
+            type: 'string',
+            hidden: ({ document }) => !['bed-sheets'].includes((document as any)?.categorySet),
+            options: {
+                list: [
+                    { title: 'Indian Size', value: 'indian-size' },
+                    { title: 'Uk Size', value: 'uk-size' },
+                ]
+            },
+        }),
+        defineField({
+            title: 'Painting Subcategory',
+            name: 'paintingSubcategory',
+            type: 'string',
+            hidden: ({ document }) => !['painting'].includes((document as any)?.categorySet),
+            options: {
+                list: [
+                    { title: 'Hand made paper', value: 'hand-made-paper' },
+                    { title: 'Silk Fabric', value: 'silk-fabric' },
+                    { title: 'Canvas', value: 'canvas' }
+                ]
+            },
+        }),
+
         // Add similar fields for other categories
         // ...
         defineField({
@@ -118,6 +177,7 @@ export const categoriesType = defineType({
             sareeSubcategory: 'sareeSubcategory',
             dupattaSubcategory: 'dupattaSubcategory',
             kurtiSubcategory: 'kurtiSubcategory',
+            mensSubcategory: 'mensSubcategory'
             // Add other subcategories here
         },
         prepare(selection) {
@@ -127,14 +187,16 @@ export const categoriesType = defineType({
                 media,
                 sareeSubcategory,
                 dupattaSubcategory,
-                kurtiSubcategory
+                kurtiSubcategory,
+                mensSubcategory
             } = selection;
 
             // Determine which subcategory to show based on the category
             let subCategory = '';
             if (subtitle === 'sarees') subCategory = sareeSubcategory;
             else if (subtitle === 'dupattas') subCategory = dupattaSubcategory;
-            else if (subtitle === 'kurtis') subCategory = kurtiSubcategory;
+            else if (subtitle === 'stiched-kurtis' || subtitle === 'unstiched-kurtis') subCategory = kurtiSubcategory;
+            else if (subtitle === 'mens-wear') subCategory = mensSubcategory
             // Add other categories here
 
             return {

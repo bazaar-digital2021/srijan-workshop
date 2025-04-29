@@ -37,9 +37,9 @@ export default async function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Providers>
-            <Navbar />
+            {/* <Navbar /> */}
             {children}
-            <Footer footerData={footerData} />
+            {/* <Footer footerData={footerData} /> */}
             <Toaster />
           </Providers>
 
