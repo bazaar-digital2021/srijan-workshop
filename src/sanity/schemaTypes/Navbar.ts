@@ -19,7 +19,21 @@ export const NavbarType = defineType({
             name: 'navMenu',
             title: 'Nav Menu',
             type: 'array',
-            of: [{ type: 'string' }],
+            of: [{
+                type: 'object',
+                fields: [
+                    {
+                        name: 'title',
+                        title: 'Title',
+                        type: 'string'
+                    },
+                    {
+                        name: 'link',
+                        title: 'Link',
+                        type: 'string'
+                    }
+                ]
+            }],
         }),
     ],
 });

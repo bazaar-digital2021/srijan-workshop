@@ -2,7 +2,10 @@ interface NavSchemaType {
     _id: string
     title: string,
     icon: string,
-    navMenu: string[]
+    navMenu: {
+        title: string,
+        link: string
+    }[]
 
 }
 
@@ -13,6 +16,9 @@ interface SliderShowSchemaType {
 
 interface HeroSchemaType {
     title: string,
-    slug: string,
+    slug: {
+        current: string,
+        _type: string
+    },
     imageUrl: string
 }

@@ -11,7 +11,10 @@ import { generateSlug } from "../utils/generateSlug"
 type NavType = {
     _id?: string
     title: string
-    navMenu: string[]
+    navMenu: {
+        title: string,
+        link: string
+    }[]
 }
 
 const MobileMenu = ({ menus }: { menus: NavType[] }) => {
@@ -83,11 +86,11 @@ const MobileMenu = ({ menus }: { menus: NavType[] }) => {
                                 <CollapsibleContent className="space-y-1 flex flex-col">
                                     {menu.navMenu.map((item, itemIndex) => (
                                         <Link
-                                            key={`${menu._id || index}-${itemIndex}`}
-                                            href={generateSlug(item)}
+                                            key={`${menu.title || index}-${itemIndex}`}
+                                            href={item.link}
                                             className="px-8 py-2 font-mono text-sm shadow-sm"
                                         >
-                                            {item}
+                                            {item.title}
                                         </Link>
                                     ))}
                                 </CollapsibleContent>

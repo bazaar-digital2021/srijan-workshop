@@ -32,9 +32,9 @@ export default async function Navbar() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className='text-start'>{menu.title}</NavigationMenuTrigger>
-                <NavigationMenuContent className={`min-w-48 grid ${menu.navMenu.length > 5 ? 'grid-cols-2 min-w-80' : 'grid-cols-1'}`}>
+                <NavigationMenuContent className={`min-w-48 grid ${menu.navMenu.length > 6 ? 'grid-cols-2 min-w-80' : 'grid-cols-1'}`}>
                   {menu.navMenu.map((item) => (
-                    <NavigationMenuLink className='block w-full px-4 py-2 hover:bg-muted' key={item} href={generateSlug(item)}>{item}</NavigationMenuLink>
+                    <NavigationMenuLink className='block w-full px-4 py-2 hover:bg-muted' key={item.title} href={item.link}>{item.title}</NavigationMenuLink>
                   ))}
                 </NavigationMenuContent>
               </NavigationMenuItem>
