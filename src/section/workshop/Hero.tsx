@@ -83,8 +83,8 @@ export default function Hero() {
                 </h2>
                 <p className="text-center font-sans text-base md:text-[21px] mt-2 md:mt-3">कोई अनुभव नहीं? कोई बात नहीं ! इस 3 घंटे की लाइव वर्कशॉप में आप सीखेंगे वो कला,जिसने सदियों तक दिलों को रंगों से जोड़ा है।</p>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-14 mt-4 justify-between items-center ">
-                    <div className="relative flex flex-col items-center justify-center -top-20">
-                        <Image src="/putul.png" alt="Madhubani Art Background" width={370} height={370}
+                    <div className="relative flex flex-col items-center justify-center ">
+                        <Image src="/putul.webp" alt="Madhubani Art Background" width={370} height={370}
                             priority
                             className="object-cover " />
                     </div>
