@@ -61,12 +61,13 @@ export default function Hero() {
         <div className="relative w-full min-h-screen ">
             {/* Background Image */}
             <Image
-                src="/hero-img.png"
+                src="/hero-img1.jpeg"
                 alt="Madhubani Art Background"
                 fill
                 priority
-                className="object-cover -z-10"
+                className="object-cover -z-20"
             />
+            <div className="inset-0 absolute  -z-10 bg-gradient-to-b from-teal-500/30 to-teal-600/30" />
             <div className="text-center w-full flex justify-center items-center">
                 <h3 className="text-black text-base md:text-xl font-semibold text-center w-max px-4 py-2 bg-[#FFEB3B] rounded-b-2xl border border-white">
                     Madhubani Painting Workshop -Live on Zoom
@@ -76,12 +77,12 @@ export default function Hero() {
             <div className="flex text-white flex-col items-center justify-center mt-4 md:mt-7 max-w-6xl mx-auto ">
 
                 <h1 className="text-[32px] md:text-[50px] font-bold text-center">
-                    अपने अंदर के कलाकार को जगाइए
+                    अपने रचनात्मक रंगों को पहचानिए
                 </h1>
                 <h2 className="text-2xl md:text-[40px] font-semibold text-center mt-1">
-                    मधुबनी से खुद को फिर से पहचानिए!
+                    मधुबनी की पारंपरिक कला से जुड़िए!
                 </h2>
-                <p className="text-center font-sans text-base md:text-[21px] mt-2 md:mt-3">कोई अनुभव नहीं? कोई बात नहीं ! इस 3 घंटे की लाइव वर्कशॉप में आप सीखेंगे वो कला,जिसने सदियों तक दिलों को रंगों से जोड़ा है।</p>
+                <p className="text-center font-sans text-base md:text-[21px] mt-2 md:mt-3">चिंता न करें अगर आपने पहले कभी ब्रश नहीं उठाया—इस 3 घंटे की इंटरैक्टिव वर्कशॉप में हम आपको सिखाएंगे वो लोककला, जिसने पीढ़ियों से संस्कृति को सजाया है।</p>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-14 mt-4 justify-between items-center ">
                     <div className="relative flex flex-col items-center justify-center ">
                         <Image src="/putul.webp" alt="Madhubani Art Background" width={370} height={370}
