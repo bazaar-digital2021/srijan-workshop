@@ -61,7 +61,7 @@ export default function Hero() {
         <div className="relative w-full min-h-screen ">
             {/* Background Image */}
             <Image
-                src="/hero-img1.jpeg"
+                src="/mithila.png"
                 alt="Madhubani Art Background"
                 fill
                 priority
