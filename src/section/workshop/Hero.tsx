@@ -9,22 +9,22 @@ import RegisterButton from "@/components/register-button";
 const workShopDetails = [
     {
         title: 'Date (Fri)',
-        desc: '18th April 25',
+        desc: '18th May 25',
         icon: CalendarDays
     },
     {
         title: 'Time ',
-        desc: '6 PM To 9 PM',
+        desc: '3 PM To 5 PM',
         icon: Clock
     },
     {
         title: 'Duration',
-        desc: '3 Hours',
+        desc: '2 Hours',
         icon: AlarmClockCheck
     },
     {
         title: 'Language',
-        desc: 'Hindi',
+        desc: 'Hindi & Mathli',
         icon: Languages
     }
 ]
@@ -61,28 +61,28 @@ export default function Hero() {
         <div className="relative w-full min-h-screen ">
             {/* Background Image */}
             <Image
-                src="/mithila.png"
+                src="/mithila.jpeg"
                 alt="Madhubani Art Background"
                 fill
                 priority
                 className="object-cover -z-20"
             />
-            <div className="inset-0 absolute  -z-10 bg-gradient-to-b from-teal-500/30 to-teal-600/30" />
+            <div className="inset-0 absolute  -z-10 bg-gradient-to-b from-teal-500/90 to-teal-600/90" />
             <div className="text-center w-full flex justify-center items-center">
                 <h3 className="text-black text-base md:text-xl font-semibold text-center w-max px-4 py-2 bg-[#FFEB3B] rounded-b-2xl border border-white">
-                    Madhubani Painting Workshop -Live on Zoom
+                    Madhubani Painting Workshop -Live on G-Meet
                 </h3>
 
             </div>
             <div className="flex text-white flex-col items-center justify-center mt-4 md:mt-7 max-w-6xl mx-auto ">
 
-                <h1 className="text-[32px] md:text-[50px] font-bold text-center">
+                <h1 className="text-[32px] md:text-[50px] font-bold text-center font-devanagari">
                     अपने रचनात्मक रंगों को पहचानिए
                 </h1>
-                <h2 className="text-2xl md:text-[40px] font-semibold text-center mt-1">
+                <h2 className="text-2xl md:text-[40px] font-semibold text-center  font-devanagari -mt-4">
                     मधुबनी की पारंपरिक कला से जुड़िए!
                 </h2>
-                <p className="text-center font-sans text-base md:text-[21px] mt-2 md:mt-3">चिंता न करें अगर आपने पहले कभी ब्रश नहीं उठाया—इस 3 घंटे की इंटरैक्टिव वर्कशॉप में हम आपको सिखाएंगे वो लोककला, जिसने पीढ़ियों से संस्कृति को सजाया है।</p>
+                <p className="text-center  text-base md:text-[21px] mt-2 md:mt-3 font-devanagari">चिंता न करें अगर आपने पहले कभी ब्रश नहीं उठाया—इस 3 घंटे की इंटरैक्टिव वर्कशॉप में हम आपको सिखाएंगे वो लोककला, जिसने पीढ़ियों से संस्कृति को सजाया है।</p>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-14 mt-4 justify-between items-center ">
                     <div className="relative flex flex-col items-center justify-center ">
                         <Image src="/putul.webp" alt="Madhubani Art Background" width={370} height={370}

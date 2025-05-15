@@ -1,3 +1,4 @@
+import Footer from "@/section/workshop/Footer";
 import Certificate from "@/section/workshop/certificate";
 import Features from "@/section/workshop/Features";
 import Hero from "@/section/workshop/Hero";
@@ -15,6 +16,7 @@ export default async function Home() {
       <JoiningBenifit />
       <Testimonial />
       <OurWork />
+      <Footer />
     </>
   );
 }

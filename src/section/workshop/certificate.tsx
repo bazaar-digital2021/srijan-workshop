@@ -8,8 +8,8 @@ export default function Certificate() {
                 <h1 className="text-2xl md:text-4xl font-bold text-center text-indigo-950">Honor your art with this special certificate</h1>
                 <h3 className="text-center text-indigo-950 text-lg md:text-xl mt-4 mb-4">You will get this after complete workshop</h3>
 
-                <div className="relative w-full h-screen">
-                    <Image src="/certificate.png" alt="certificate" fill className="object-cover" />
+                <div className="relative ">
+                    <Image src="/workshop/certificate.png" alt="certificate" height={1000} width={1000} className="object-cover" />
                 </div>
                 <div className="flex justify-center items-center mt-4 md:mt-8 ">
                     <RegisterButton className="w-full max-w-2xl" />

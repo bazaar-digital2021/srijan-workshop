@@ -34,12 +34,13 @@ export default function JoiningBenifit() {
         <div className="relative w-full min-h-screen ">
             {/* Background Image */}
             <Image
-                src="/benifit.jpg"
+                src="/mithila.jpeg"
                 alt="Madhubani Art Background"
                 fill
                 priority
-                className="object-cover -z-10"
+                className="object-cover -z-20"
             />
+            <div className="inset-0 absolute  -z-10 bg-gradient-to-b from-teal-500/90 to-teal-600/90" />
             <div className="mx-auto px-4 md:px-0 max-w-5xl py-8 md:py-16">
                 <h1 className="text-2xl md:text-5xl font-bold text-center text-white mb-8 md:mb-16">
                     Get Bonuses after Joining this Workshop

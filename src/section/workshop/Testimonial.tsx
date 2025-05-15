@@ -3,15 +3,15 @@ import RegisterButton from "@/components/register-button";
 import Image from "next/image";
 
 const testimonials = [
-    '/review/1.jpg',
-    '/review/2.jpg',
-    '/review/3.jpg',
-    '/review/4.jpg',
-    '/review/5.jpg',
-    '/review/6.jpg',
-    '/review/7.jpg',
-    '/review/8.jpg',
-    '/review/9.jpg',
+    '/review/1.png',
+    '/review/2.png',
+    '/review/3.png',
+    '/review/4.png',
+    '/review/5.png',
+    '/review/6.png',
+    '/review/7.png',
+    '/review/8.png',
+    '/review/9.png',
     '/review/10.jpg'
 ]
 

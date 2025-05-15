@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Anek_Devanagari } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/section/NavBar";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -15,6 +15,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const anekDevanagari = Anek_Devanagari({
+  variable: "--font-anek-devanagari",
   subsets: ["latin"],
 });
 
@@ -34,7 +39,7 @@ export default async function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${anekDevanagari.variable} antialiased`}
         >
           <Providers>
             {/* <Navbar /> */}

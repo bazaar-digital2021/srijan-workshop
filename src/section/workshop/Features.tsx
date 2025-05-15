@@ -8,7 +8,8 @@ const features = [
         icon: LayoutDashboard,
         title: "Basic Shapes",
         description: "",
-        iconColor: "text-red-600"
+        iconColor: "text-red-600",
+        image: '/workshop/tringular.jpeg'
     },
     {
         icon: History,
@@ -64,7 +65,7 @@ export default function Features() {
     return (
         <section className="py-16 px-4 bg-white">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-center text-indigo-950 mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-center text-indigo-950 mb-16 font-devanagari">
                     इसमें आप क्या सीखोगे ?
                 </h2>
 
