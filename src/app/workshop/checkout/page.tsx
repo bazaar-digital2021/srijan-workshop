@@ -288,7 +288,7 @@ export default function CheckoutPage() {
                                         <Check className="text-green-500 h-6 w-6 flex-shrink-0 mt-0.5" />
                                         <div>
                                             <h4 className="font-semibold">Learn Authentic Techniques</h4>
-                                            <p className="text-gray-600 text-sm">Direct from an artist from Madhubani itself</p>
+                                            <p className="text-gray-600 text-sm">Direct from an artist from Mithila itself</p>
                                         </div>
                                     </li>
                                     <li className="flex gap-3">
@@ -361,7 +361,7 @@ export default function CheckoutPage() {
                                         </div>
                                         <div>
                                             <p className="text-sm text-gray-500">Location</p>
-                                            <p className="font-semibold">Zoom (Link will be shared after registration)</p>
+                                            <p className="font-semibold">Google Meet (Link will be shared after registration)</p>
                                         </div>
                                     </div>
                                 </div>
