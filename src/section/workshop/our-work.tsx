@@ -27,9 +27,9 @@ export default function OurWork() {
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full">
                     {arts.map((art, index) => (
-                        <div key={art} className="relative w-full h-full">
+                        <div key={art} className="relative w-[400px] h-[400px] md:w-[500px] md:h-[500px] mx-auto">
 
-                            <Image src={art} alt="art" height={600} width={600} className="rounded-lg object-cover" />
+                            <Image src={art} alt="art" fill className="rounded-lg object-cover" />
                         </div>
                     ))}
                 </div>
