@@ -5,7 +5,9 @@ const arts = [
     '/student/1.jpg',
     '/student/2.jpg',
     '/student/3.jpg',
-    '/student/4.jpg'
+    '/student/4.jpg',
+    '/student/5.jpg',
+    '/student/6.jpg',
 ]
 
 export default function OurWork() {

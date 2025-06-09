@@ -9,17 +9,17 @@ import RegisterButton from "@/components/register-button";
 const workShopDetails = [
     {
         title: 'Date (Fri)',
-        desc: '18th May 25',
+        desc: '15th June 25',
         icon: CalendarDays
     },
     {
         title: 'Time ',
-        desc: '3 PM To 5 PM',
+        desc: '1 PM To 4 PM',
         icon: Clock
     },
     {
         title: 'Duration',
-        desc: '2 Hours',
+        desc: '3 Hours',
         icon: AlarmClockCheck
     },
     {
