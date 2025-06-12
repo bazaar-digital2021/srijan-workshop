@@ -8,7 +8,7 @@ import RegisterButton from "@/components/register-button";
 
 const workShopDetails = [
     {
-        title: 'Date (Fri)',
+        title: 'Date (Sun)',
         desc: '15th June 25',
         icon: CalendarDays
     },
